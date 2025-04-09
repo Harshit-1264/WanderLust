@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+</head> -->
+
+<!-- remove all html code except body -->
+
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h3>All Listings</h3>
+
+    <!--for creating new listing-->
+    <!-- <form method="GET" action="/listings/new">  
+        <button>Create New Listing</button>
+    </form> -->
+    
+
+    <!-- creating a card for styling index -->
+     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">  <!--when screen size is large -> set min 3 cards, medium -> min 2 cards, small -> min 1 cards-->
+        <% for(let listing of allListings){ %>
+            <a href="/listings/<%= listing._id %>" class="listing-link">  <!--on click on img, title, price moves to show route(Listing Detail)-->
+                <div class="card col">
+                    <img
+                        src="<%= listing.image %>"
+                        class="card-img-top"
+                        alt="listing_image"
+                        style="height: 20rem;"> <!--img height 20rem-->
+
+                    <div class="card-img-overlay"></div>  <!--agar card ke img ke upar he kuch cheeje place karni hai to use karege-->
+
+                    <div class="card-body">
+                    <p class="card-text">
+                        <b><%= listing.title %></b> <br/>
+                        &#8377; <%= listing.price %> / night
+                    </p>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+     </div>
+    
+
+<!-- 
+    <ul>
+        <% for(let listing of allListings){ %> -->
+            <!-- while listing with title we can also create it in from of link with anchor tag -->
+            <!--<li><a href="/listings/<%= listing._id %>"><%= listing.title %></a></li>--> <!--when we click on achor tag, a req goes to show route & in show route, views data of specific listing--> 
+        <!-- <% } %> -->
+    </ul>
+</body>
+
+<!-- </html> -->
