@@ -20,3 +20,22 @@ WanderLust is a travel web application built using Node.js, Express.js, and Mong
 - 📄 RESTful routing structure
 - 💾 Persistent data with MongoDB
 
+## 🧠 Project Structure
+
+WanderLust/
+├── models/
+│   └── campground.js
+├── routes/
+│   └── campgrounds.js
+├── views/
+│   ├── campgrounds/
+│   ├── partials/
+│   └── layout.ejs
+├── public/
+│   ├── stylesheets/
+├── app.js
+└── package.json
+
+
+## 🙋‍♂️ Author
+Harshit Kumar Mishra
